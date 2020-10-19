@@ -40,9 +40,11 @@ class Element:
 
     def show(self):
         configure_item(self.name, show=True)
+        return self
 
     def hide(self):
         configure_item(self.name, show=False)
+        return self
 
     def configure(self, **config):
         configure_item(self.name, **config)

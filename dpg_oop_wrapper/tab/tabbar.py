@@ -1,5 +1,6 @@
+from dearpygui.core import add_tab_bar, end
+
 from ..element import Element
-from dearpygui.core import add_tab_bar, end, add_same_line
 
 __all__ = [
     'TabBar'
