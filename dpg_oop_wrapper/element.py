@@ -1,3 +1,4 @@
+import warnings
 from abc import ABCMeta, abstractmethod
 from typing import TypeVar
 
@@ -28,7 +29,7 @@ __all__ = [
 PlaceType = TypeVar('PlaceType')
 
 
-class Element(metaclass=ABCMeta):
+class Element:
     def __init__(self, name: str, **config):
         self.name = name
         self.default_config = config
@@ -51,12 +52,8 @@ class Element(metaclass=ABCMeta):
         configure_item(self.name, **config)
         return self
 
-    @abstractmethod
     def place(self, same_line=False):
-        """
-        places the element in the GUI then returns itself
-        :param same_line:
-        """
+        warnings.warn('code tried to call place() on a generic element, place() is only meant to be used on subclasses of Element')
         return self
 
     @property

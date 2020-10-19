@@ -1,5 +1,3 @@
-from dearpygui.simple import show_item
-
 from dpg_oop_wrapper import *
 from dearpygui.core import start_dearpygui
 
