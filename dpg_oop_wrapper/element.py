@@ -1,6 +1,4 @@
 import warnings
-from abc import ABCMeta, abstractmethod
-from typing import TypeVar
 
 from dearpygui.core import (
     is_item_hovered,
@@ -25,8 +23,6 @@ from dearpygui.core import (
 __all__ = [
     'Element'
 ]
-
-PlaceType = TypeVar('PlaceType')
 
 
 class Element:
