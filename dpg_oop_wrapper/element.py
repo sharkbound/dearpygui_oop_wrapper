@@ -52,6 +52,12 @@ class Element:
         configure_item(self.name, **config)
         return self
 
+    def get_config(self):
+        return get_item_configuration(self.name)
+
+    def get_config_value(self, key: str, default=None):
+        return get_item_configuration(self.name).get(key, default)
+
     def place(self, same_line=False):
         warnings.warn('code tried to call place() on a generic element, place() is only meant to be used on subclasses of Element')
         return self
